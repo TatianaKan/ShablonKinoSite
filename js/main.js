@@ -264,14 +264,14 @@ const movieConstructor = (selector, options) => {
 };
 
 movieConstructor('.app', {
-	title: 'Ведьмак',
-	background: 'witcher/background.jpg',
+	title: 'Чернобыль',
+	background: 'Chernobyl/background.jpg',
 	fontColor: 'affffff',
-	backgroundColor: '#141218',
+	backgroundColor: '#839E8F',
 	subColor: '#9D2929',
-	favicon: 'witcher/icon.png',
+	favicon: 'Chernobyl/favicon.jpg',
 	header: {
-		logo: 'witcher/logo.png',
+		logo: 'Chernobyl/logo.jpg',
 		social: [
 			{
 				title: 'Twitter',
@@ -305,31 +305,37 @@ movieConstructor('.app', {
 		]
 	},
 	main: {
-		genre: '2019, фэнтези',
-		rating: '8',
-		description: 'Ведьмак Геральт, мутант и убийца чудовищ, на своей верной лошади по кличке Плотва путешествует по Континенту. За тугой мешочек чеканных монет этот мужчина избавит вас от всякой настырной нечисти — хоть от чудищ болотных, оборотней и даже заколдованных принцесс',
-		trailer: 'https://www.youtube.com/watch?v=P0oJqfLzZzQ',
+		genre: '2019, Драма',
+		rating: '9',
+		description: 'Хроника одной из самых страшных техногенных катастроф в истории. Мини-сериал воссоздает события сразу после аварии на Чернобыльской АЭС, рассказывая о жертвах, принесенных ради спасения от неизмеримой трагедии. Британский актер Джаред Харрис («Безумцы», «Корона») предстает в роли советского физика-ядерщика, который одним из первых осознал масштабы катастрофы. Стеллан Скарсгард («Девушка с татуировкой дракона», «Меланхолия») сыграл замглаву совета министров СССР Бориса Щербину, назначенного Кремлем руководить правительственной комиссией по ликвидации последствий аварии. Номинантка на «Оскар» Эмили Уотсон («Рассекая волны») исполнила роль вымышленного ученого-физика Уланы Хомюк, решившей раскрыть истинную причину аварии. Сценарий для проекта, опираясь на материалы архивов, написал Крейг Мазин («Белоснежка и Охотник 2»). Поставил сериал шведский режиссер Йохан Ренк, работавший над хитами «Во все тяжкие» и «Викинги».',
+		trailer: 'https://www.youtube.com/watch?v=RhoSilOtDF8',
 		slider: [
 			{
-				img: 'witcher/series/series-1.jpg',
-				title: 'Начало конца',
+				img: 'Chernobyl/serii/seria-1.jpg',
+				title: '',
 				subtitle: 'Серия №1'
 			},
 			{
-				img: 'witcher/series/series-2.jpg',
-				title: 'Четыре марки',
+				img: 'Chernobyl/serii/seria-2.jpg',
+				title: 'Пожалуйста, сохраняйте спокойствие',
 				subtitle: 'Серия №2'
 			},
 			{
-				img: 'witcher/series/series-3.jpg',
-				title: 'Предательская луна',
+				img: 'Chernobyl/serii/seria-3.jpg',
+				title: 'Да разверзнется земля!',
 				subtitle: 'Серия №3'
 			},
 			{
-				img: 'witcher/series/series-4.jpg',
-				title: 'Банкеты, ублюдки и похороны',
+				img: 'Chernobyl/serii/seria-4.jpg',
+				title: 'Счастье всего человечестваы',
 				subtitle: 'Серия №4'
-			}
+			},
+			{
+				img: 'Chernobyl/serii/seria-5.png',
+				title: 'Вечная память',
+				subtitle: 'Серия №5'
+			},
+
 		],
 	},
 });
