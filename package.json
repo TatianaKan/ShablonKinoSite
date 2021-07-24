@@ -16,5 +16,8 @@
     "postcss": "^8.3.5",
     "sass": "^1.35.1",
     "sort-css-media-queries": "^2.0.3"
+  },
+  "dependencies": {
+    "jshint": "^2.13.0"
   }
 }

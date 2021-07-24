@@ -31,13 +31,11 @@ const getElement = (tagName, classNames, attributes) => {
 	if (attributes) {
 		for (const attribute in attributes) {
 			element[attribute] = attributes[attribute]
-
 		}
 	}
 
 	return element;
 }
-
 
 const createHeader = ({ title, header: { logo, menu, social } }) => {
 	const header = getElement('header');//sozdaet element header
@@ -54,7 +52,6 @@ const createHeader = ({ title, header: { logo, menu, social } }) => {
 		wrapper.append(logoElem);
 	}
 
-
 	if (menu) {
 		///DZ
 		const menuWrapper = getElement('nav', ['menu-list']);///создание тега нав
@@ -67,8 +64,6 @@ const createHeader = ({ title, header: { logo, menu, social } }) => {
 			return menuLink;
 		});
 
-
-
 		menuWrapper.append(...allMenu);
 		wrapper.append(menuWrapper);
 
@@ -79,8 +74,6 @@ const createHeader = ({ title, header: { logo, menu, social } }) => {
 		})
 		container.append(menuBtn)
 	};
-
-
 
 	if (social) {
 		const socialWrapper = getElement('div', ['social']);
@@ -95,13 +88,9 @@ const createHeader = ({ title, header: { logo, menu, social } }) => {
 			return socialLink;
 		});
 
-
 		socialWrapper.append(...allSocial);
 		wrapper.append(socialWrapper);
 	}
-
-
-
 
 	header.append(container);
 	container.append(wrapper);
@@ -112,7 +101,6 @@ const createHeader = ({ title, header: { logo, menu, social } }) => {
 const createMain = ({
 	title,
 	main: { genre, rating, description, trailer, slider } }) => {
-
 	const main = getElement('main');
 	const container = getElement('div', ['container']);
 	main.append(container);
@@ -158,7 +146,6 @@ const createMain = ({
 			{
 				textContent: description
 			})
-
 		content.append(descriptionElem)
 	}
 
@@ -191,8 +178,6 @@ const createMain = ({
 		const swiperBlock = getElement('div', ['swiper-container']);
 		const swiperWrapper = getElement('div', ['swiper-wrapper']);
 		const arrow = getElement('button', ['arrow']);
-
-
 
 		const slides = slider.map(item => {
 			const swiperSlide = getElement('div', ['swiper-slide']);
@@ -238,18 +223,20 @@ const createMain = ({
 				}
 			}
 		});
-
 	}
-
 	return main;
 };
-
 
 const movieConstructor = (selector, options) => {
 	const app = document.querySelector(selector);
 	app.classList.add('body-app');
 
 	app.style.color = options.fontColor || '';
+	app.style.backgroundColor = options.backgroundColor || '';
+
+	if (options.subColor) {
+		document.documentElement.style.setProperty('--sub-color', options.subColor);
+	}
 
 	app.style.backgroundImage = options.background ?
 		`url("${options.background}")` : '';
@@ -257,7 +244,6 @@ const movieConstructor = (selector, options) => {
 	if (options.favicon) {
 		const index = options.favicon.lastIndexOf('.');
 		const type = options.favicon.substring(index + 1);
-
 
 		const favicon = getElement('link', null, {
 			relt: 'icon',
@@ -275,10 +261,7 @@ const movieConstructor = (selector, options) => {
 	if (options.main) {
 		app.append(createMain(options));
 	}
-
 };
-
-
 
 movieConstructor('.app', {
 	title: 'Ведьмак',
@@ -320,8 +303,6 @@ movieConstructor('.app', {
 				link: '#'
 			}
 		]
-
-
 	},
 	main: {
 		genre: '2019, фэнтези',
